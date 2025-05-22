@@ -125,3 +125,68 @@ npm run publishAll
 If you are having issues deploying the changes, review the documentation [docs.pega.com constellation DX component CLI references][constellation-dx-cli-references]
 
 [constellation-dx-cli-references]: https://docs.pega.com/bundle/constellation-dx-components/page/constellation-dx-components/custom-components/command-line-references-constellation-dx-components.html
+
+🔹 Overview of Your Project Files
+Your project is structured around a Pega Constellation UI Gallery template, likely written in TypeScript (.ts and .tsx files). Here’s what each file does:
+1️⃣ index.tsx → Main Component
+
+- Defines the primary UI component (PegaConstellationUiGalleryLtdr).
+- Retrieves regions (A, B, C) and structures grid layout for your columns.
+- Uses getAllFields(getPConnect()) to determine how many columns to render.
+- Handles highlighted data fields (showHighlightedData logic).
+  2️⃣ config.json → Component Settings
+- Defines properties and metadata (e.g., regions, labels, icons).
+- Controls how regions (A, B, C) are structured for the template.
+- Contains "icon": "TwoColumnDetails.svg" → this needs to change if using 3 or 5 columns!
+  3️⃣ demo.stories.tsx → Testing in Storybook
+- Used to test and preview the component in Storybook.
+- Defines a mock implementation (getPConnect()) to simulate Pega functionality.
+- Contains the logic for rendering Regions dynamically (<Region />).
+- You updated this file to support three (or five) columns!
+  4️⃣ DetailsRender.tsx → Renders Field Data
+- Responsible for how fields appear in regions (A, B, C).
+- Ensures fields are read-only when necessary (setInheritedProp('readOnly', true)).
+- Works with index.tsx to display the correct details for each case.
+  5️⃣ HighlightRender.tsx → Handles Highlighted Fields
+- Controls highlighted fields display (showHighlightedData property).
+- Works with metadata (getPConnect().getRawMetadata().config) to ensure correct rendering.
+  6️⃣ mock.ts → Mock Data for Testing
+- Defines dummy data for testing inside demo.stories.tsx.
+- Contains sample case details, operators, and status fields.
+- Helps simulate how Pega data would behave in a real environment.
+  7️⃣ Operator.tsx → User Details Component
+- Displays operator details (createOperator, updateOperator).
+- Works with StatusWork.tsx to show who created or updated the case.
+  8️⃣ StatusWork.tsx → SLA and Status Fields
+- Handles SLA deadlines, status, and key milestones.
+- Works with DetailsRender.tsx to display status badges.
+  9️⃣ PConnProps.d.ts → Type Definitions
+- Defines interface types for Pega connection props.
+- Ensures strict TypeScript typing (PConnFieldProps).
+  🔟 styles.ts → Styled Components
+- Controls layout, margins, spacing using styled-components.
+- Defines grid container styling (StyledDetailsGridContainer).
+  1️⃣1️⃣ TwoColumnDetails.svg → Icon
+- Used in config.json as "icon": "TwoColumnDetails.svg".
+- If using 3 or 5 columns, this should be updated to match the correct layout.
+  1️⃣2️⃣ utils.ts → Utility Functions
+- Defines helper functions like getAllFields(getPConnect()).
+- Handles data extraction from metadata (getRawMetadata()).
+  1️⃣3️⃣ create-nonce.ts → Security Utilities
+- Generates unique identifiers (nonce) for secure execution.
+- Used to prevent malicious scripts.
+
+🔹 Key Areas for Your Presentation
+✅ Explain the role of index.tsx in setting up the component and grid layout.
+✅ Show how config.json defines metadata like regions and icons.
+✅ Highlight how demo.stories.tsx allows testing in Storybook.
+✅ If discussing styling, mention styles.ts for grid layouts.
+✅ Talk about how mock.ts and utils.ts support functionality.
+
+🚀 Final Tip for Your Presentation
+
+- If using 3 or 5 columns, make sure your config.json and index.tsx correctly handle the layout.
+- You can check by logging:
+  console.log("Number of regions detected:", numRegions);
+
+Now you're fully prepared! If you n

@@ -1,0 +1,27 @@
+{
+  "name": "Pega_ConstellationUIGallery_L1FR",
+  "label": "L1FR",
+  "description": "",
+  "organization": "Pega",
+  "version": "0.0.1",
+  "library": "ConstellationUIGallery",
+  "allowedApplications": [],
+  "componentKey": "Pega_ConstellationUIGallery_L1FR",
+  "type": "Template",
+  "subtype": "FORM",
+  "icon": "TwoColumn.svg",
+  "properties": [
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "B",
+      "label": "Region B",
+      "format": "CONTENTPICKER",
+      "allowCreatingGroup": true
+    }
+  ]
+}

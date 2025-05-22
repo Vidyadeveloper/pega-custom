@@ -7,10 +7,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pegasystems/constellation-ui-gallery.git"
+    "url": "git+https://github.com/pegasystems/constellation-ui-gallery.git"
   },
-  "license": "Apache-2.0",
-  "author": "Pegasystems",
+  "license": "",
+  "author": "",
   "main": "src/index.js",
   "scripts": {
     "start": "storybook dev --port 6006",
@@ -31,14 +31,16 @@
     "test": "jest",
     "coverage": "jest --coverage --coverageReporters=html",
     "authenticate": "custom-dx-components authenticate",
-    "buildComponent": "custom-dx-components buildComponent",
+    "buildComponent": "npx --node-options=\"--max-old-space-size=4096\" @pega/custom-dx-components buildComponent",
     "buildAllComponents": "custom-dx-components buildAllComponents",
     "publish": "custom-dx-components publish",
+    "copy-assets": "xcopy /E /I src\\assets dist\\assets",
     "publishAll": "custom-dx-components publishAll",
     "list": "custom-dx-components list",
     "validate-schema": "custom-dx-components validateSchema",
     "createLib": "custom-dx-components createLibrary",
     "switchLib": "custom-dx-components switchLibrary",
+    "create": "custom-dx-components create",
     "createLibVersion": "custom-dx-components createVersion",
     "switchLibVersion": "custom-dx-components switchVersion",
     "listLib": "custom-dx-components listLibrary",
@@ -99,7 +101,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^12.1.5",
     "@types/jest": "^29.5.14",
-    "@types/react": "^17.0.80",
+    "@types/react": "^17.0.85",
     "@types/react-dom": "^17.0.25",
     "@types/react-image-magnifiers": "^1.3.5",
     "@types/styled-components": "^5.1.34",
@@ -121,11 +123,16 @@
     "npm-quick-run": "^1.18.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.5.3",
+    "rimraf": "^5.0.10",
     "sort-package-json": "^2.14.0",
     "storybook": "^7.6.19",
     "stylelint": "16.16.0",
     "ts-jest": "^29.2.6",
-    "typescript": "^5.8.2"
+    "typescript": "^5.4.5"
   },
-  "organization": "Pega"
+  "organization": "Pega",
+  "bugs": {
+    "url": "https://github.com/pegasystems/constellation-ui-gallery/issues"
+  },
+  "homepage": "https://github.com/pegasystems/constellation-ui-gallery#readme"
 }

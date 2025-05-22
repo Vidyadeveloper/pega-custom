@@ -1,0 +1,32 @@
+{
+  "name": "Pega_ConstellationUIGallery_L1P",
+  "label": "L1P",
+  "description": "",
+  "organization": "Pega",
+  "version": "0.0.1",
+  "library": "ConstellationUIGallery",
+  "allowedApplications": [],
+  "componentKey": "Pega_ConstellationUIGallery_L1P",
+  "type": "Template",
+  "subtype": "PAGE",
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "useConfigurableLayout",
+      "label": "Use inline layout for insights",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "enableGetNextWork",
+      "label": "Enable Get next work",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Widgets", "Views", "Insights"]
+    }
+  ],
+  "defaultConfig": {}
+}

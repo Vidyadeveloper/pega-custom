@@ -1,0 +1,56 @@
+{
+  "name": "Pega_ConstellationUIGallery_L1DR",
+  "label": "L1DR",
+  "description": "",
+  "organization": "Pega",
+  "version": "0.0.1",
+  "library": "ConstellationUIGallery",
+  "allowedApplications": [],
+  "componentKey": "Pega_ConstellationUIGallery_L1DR",
+  "type": "Template",
+  "subtype": "DETAILS",
+  "icon": "TwoColumnDetails.svg",
+  "properties": [
+    {
+      "name": "showHighlightedData",
+      "label": "Enable highlighted fields",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "highlightedData",
+      "label": "Highlighted fields",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields"],
+      "visibility": "$this.showHighlightedData = true",
+      "saveToConfig": true
+    },
+    {
+      "name": "A",
+      "label": "Region A",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "B",
+      "label": "Region B",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "C",
+      "label": "Region C",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    },
+    {
+      "name": "D",
+      "label": "Region D",
+      "format": "CONTENTPICKER",
+      "addTypeList": ["Fields", "Views"],
+      "allowCreatingGroup": true
+    }
+  ]
+}
